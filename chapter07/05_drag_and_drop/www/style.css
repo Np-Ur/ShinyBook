@@ -1,0 +1,6 @@
+#drop-area {
+    border-style:solid;
+    border-color:red;
+    height:100px;
+    overflow:auto;
+}
