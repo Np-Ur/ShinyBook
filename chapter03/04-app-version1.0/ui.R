@@ -1,0 +1,23 @@
+library(shiny)
+
+shinyUI(
+  navbarPage("Shinyサンプルアプリケーション",
+             tabPanel("Home",
+                      h1("『RとShinyで作るWebアプリケーション』のサンプルアプリケーション"),
+                      h2("アプリケーション概要"),
+                      p("オープンソースデータを用いて可視化と分析を行えるShinyアプリです。"),
+                      helpText("サンプルなので、うまく動かない可能性もあるのでご注意ください。")),
+             tabPanel("Shinyとは?",
+                      h1("Shinyでは以下のようなアプリケーションが作成できます。")),
+             tabPanel("可視化"),
+             tabPanel("回帰"),
+             tabPanel("分類"),
+             tabPanel("クラスタリング"),
+             navbarMenu("その他",
+                        tabPanel("About",
+                                 h2("私の名前はNp-Urです。")),
+                        tabPanel("ソースコード",
+                                 a(href="https://github.com/Np-Ur/ShinyBook", 
+                                   p("https://github.com/Np-Ur/ShinyBook"))))
+  )
+)
