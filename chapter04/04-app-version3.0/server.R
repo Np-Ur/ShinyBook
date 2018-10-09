@@ -33,6 +33,6 @@ server <- function(input, output) {
   
   # 以下追加箇所
   output$attribute_table <- DT::renderDataTable({
-    attribute
+    attribute_data
   })
 }

@@ -32,7 +32,7 @@ server <- function(input, output) {
   })
   
   output$attribute_table <- DT::renderDataTable({
-    attribute
+    attribute_data
   })
   
   output$choices_for_plot <- renderUI({
