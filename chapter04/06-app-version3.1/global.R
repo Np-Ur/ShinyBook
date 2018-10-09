@@ -7,6 +7,10 @@ library(rgdal)
 map <- readOGR(dsn = "./data", layer = "sample", encoding = "UTF-8", stringsAsFactors = FALSE)
 attribute_data <- read.csv("./data/attribute.csv")
 
+# library(readr)
+# attribute <- read_csv("./data/attribute.csv")
+# attribute_data <- as.data.frame(attribute)
+
 # 以下追加箇所
 # selectInputで使う選択肢を読み込み
 colors <- c("BrBG", "BuPu", "Oranges")
