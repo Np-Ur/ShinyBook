@@ -225,18 +225,18 @@ shinyServer(function(input, output, session) {
     multiplot(plotlist = plot_list(), cols = 2)
   })
   
-  output$downloadData = downloadHandler(
-    filename = "shiny.pptx",
-    content = function(file){
-      doc = pptx()
-      doc = addSlide(doc, "Title Slide")
-      doc = addTitle(doc,"Shinyで作ったパワーポイントです")
-      doc = addSubtitle(doc, "Google アナリティクスのデータを可視化")
+  output$download_data <- downloadHandler(
+    filename <- "shiny.pptx",
+    content <- function(file){
+      doc <- pptx()
+      doc <- addSlide(doc, "Title Slide")
+      doc <- addTitle(doc,"Shinyで作ったパワーポイントです")
+      doc <- addSubtitle(doc, "Google アナリティクスのデータを可視化")
       
       for (i in 1:length(plot_list())){
-        doc = addSlide(doc, "Title and Content")
-        doc = addTitle(doc, input$graph_title)
-        doc = addPlot(doc, fun = print, x = plot_list()[[i]])
+        doc <- addSlide(doc, "Title and Content")
+        doc <- addTitle(doc, input$graph_title)
+        doc <- addPlot(doc, fun = print, x = plot_list()[[i]])
       }
       
       writeDoc(doc, file)
