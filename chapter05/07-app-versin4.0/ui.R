@@ -50,7 +50,7 @@ shinyUI(
                       # 以下追加箇所
                       textInput("graph_title", label = "グラフのタイトルを入力", value = "グラフ1"),
                       h2("パワーポイントダウンロード"),
-                      downloadButton('downloadData', 'Download')
+                      downloadButton('download_data', 'Download')
              )
   )
 )
