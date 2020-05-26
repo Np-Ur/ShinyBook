@@ -11,3 +11,12 @@ chapter02/09-add-CSS を実行する場合。
 ```
 
 ただし、用いているライブラリをインストールしていない場合、エラーになるのでご注意ください。
+
+
+
+## 正誤表
+
+|  ページ  |  誤  |  正  |
+| ---- | ---- | ---- |
+| P77  |  install.packages("shinythems")  |  install.packages("shinythemes")  |
+| P252  |  デバック  |  デバッグ |
